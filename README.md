@@ -1,151 +1,68 @@
-Calculadora Simples
+## 📁 Estrutura do Projeto
 
-Uma calculadora simples desenvolvida utilizando HTML, CSS, JavaScript e PHP, estruturada com o padrão MVC (Model, View, Controller). Este projeto tem como objetivo demonstrar a criação de uma aplicação web básica seguindo boas práticas de organização de código.
+O projeto representa uma calculadora simples usando HTML, CSS, JavaScript e PHP. Ele contém as seguintes pastas e arquivos, seguindo o padrão MVC:
 
-Funcionalidades
+Model/
 
-Operações básicas: adição, subtração, multiplicação e divisão
+- **Calculadora.php**
 
-Interface intuitiva e responsiva
+Responsável pela lógica da calculadora. Contém métodos para operações matemáticas como:
 
-Estrutura organizada com Model, View, Controller
+`somar(a, b)` → Exibe a soma entre os números
 
-Código modular com arquivos de utilidades em util/
+`subtrair(a, b)` → Exibe a subtração entre os números
 
-Estrutura do Projeto
-calculadora/
-│
-├── index.php         # Entrada principal da aplicação (View)
-├── controller/       # Controladores que processam a lógica da calculadora
-│   └── CalculadoraController.php
-├── model/            # Modelos que representam dados e lógica de negócio
-│   └── Calculadora.php
-├── view/             # Arquivos de interface e layout
-│   └── calculadoraView.php
-├── util/             # Funções auxiliares
-│   └── helpers.php
-├── assets/
-│   ├── css/          # Arquivos de estilo
-│   └── js/           # Scripts JavaScript
-└── README.md
+`multiplicar(a, b)`→ Exibe a multiplicação entre os números
 
-Tecnologias Utilizadas
+`dividir(a, b)` → Exibe a divisão entre os números
 
-HTML5 – Estrutura da página
+Valida entradas e retorna o resultado para o Controller.
 
-CSS3 – Estilos e responsividade
+View/
 
-JavaScript – Interatividade do front-end
+index.php
 
-PHP – Processamento de operações no back-end
+Exibe a interface da calculadora para o usuário.
 
-MVC – Organização do projeto
+Contém botões numéricos, operadores e campos de entrada.
 
-Como Executar
+Recebe os resultados do Controller e atualiza a tela.
 
-Clone este repositório:
+style.css
 
-git clone https://github.com/seu-usuario/calculadora.git
+Responsável pelo design da calculadora.
 
+Define cores, fontes, tamanhos e layout responsivo.
 
-Copie os arquivos para o diretório do seu servidor local (ex.: htdocs no XAMPP).
+Controller/
 
-Abra o navegador e acesse:
+CalculadoraController.php
 
-http://localhost/calculadora/
+Recebe os dados da View (valores e operação selecionada).
 
-Estrutura MVC
+Chama os métodos do Model para calcular o resultado.
 
-Model: Contém a lógica das operações matemáticas.
+Retorna o resultado para a View exibir.
 
-View: Interface do usuário, exibindo a calculadora.
+Main/
 
-Controller: Processa as requisições do usuário e retorna os resultados.
+index.php
 
-Util: Funções auxiliares que podem ser reutilizadas em diferentes partes do projeto.
+Arquivo principal que inicializa o sistema MVC.
 
-Contribuição
+Instancia o Controller e exibe a View.
 
-Contribuições são bem-vindas! Para melhorias ou sugestões, abra uma issue ou envie um pull request.
+Gerencia requisições do usuário e envia dados ao Model.
 
-Licença
+Descrição Geral
 
-Este projeto está licenciado sob a MIT License – veja o arquivo LICENSE
- para mais detalhes.
+Este projeto é uma calculadora web que realiza operações matemáticas básicas.
+Seguindo o padrão MVC (Model-View-Controller), ele separa a lógica da aplicação (Model), a interface do usuário (View) e o controle das ações (Controller), garantindo organização e facilidade de manutenção.
 
-Se você quiser, posso criar uma versão ainda mais visual, com badges de linguagem, preview da calculadora e instruções passo a passo para executar no navegador. Isso deixa o README muito mais profissional para o GitHub.
+HTML → Estrutura da interface
 
-Quer que eu faça essa versão?
+CSS → Estilo visual
 
-Você disse:
-Faça mais bonitinho, usando emotis mas sem perder a formalidade
-O ChatGPT disse:
+JavaScript → Interações dinâmicas e validações na interface
 
-Perfeito! Aqui está uma versão do README mais visual e agradável, usando emojis de forma discreta, mas mantendo a formalidade:
-
-🖩 Calculadora Simples
-
-Uma calculadora web simples desenvolvida com HTML, CSS, JavaScript e PHP, organizada com o padrão MVC (Model, View, Controller).
-Este projeto demonstra como estruturar uma aplicação web básica de forma modular e reutilizável.
-
-✨ Funcionalidades
-
-🧮 Operações básicas: adição, subtração, multiplicação e divisão
-
-📱 Interface intuitiva e responsiva
-
-🗂️ Estrutura organizada com Model, View, Controller
-
-🛠️ Funções auxiliares em util/ para modularidade do código
-
-📂 Estrutura do Projeto
-calculadora/
-│
-├── index.php          # Entrada principal da aplicação (View)
-├── controller/        # Controladores que processam a lógica
-│   └── CalculadoraController.php
-├── model/             # Modelos com a lógica das operações
-│   └── Calculadora.php
-├── view/              # Arquivos de interface e layout
-│   └── calculadoraView.php
-├── util/              # Funções auxiliares
-│   └── helpers.php
-├── assets/
-│   ├── css/           # Estilos da página
-│   └── js/            # Scripts JavaScript
-└── README.md
-
-🛠 Tecnologias Utilizadas
-
-HTML5 – Estrutura da página
-
-CSS3 – Estilos e responsividade
-
-JavaScript – Interatividade no front-end
-
-PHP – Processamento no back-end
-
-MVC – Organização modular do projeto
-
-🚀 Como Executar
-
-Clone o repositório:
-
-git clone https://github.com/seu-usuario/calculadora.git
-
-
-Copie os arquivos para o diretório do seu servidor local (ex.: htdocs no XAMPP).
-
-Abra o navegador e acesse:
-
-http://localhost/calculadora/
-
-🔄 Estrutura MVC
-
-Model: Contém a lógica das operações matemáticas.
-
-View: Interface do usuário, exibindo a calculadora.
-
-Controller: Processa as requisições e retorna os resultados.
-
-Util: Funções auxiliares reutilizáveis em diferentes partes do projeto.
+PHP → Processamento das operações matemáticas e integração com MVC
